@@ -1,0 +1,10 @@
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/all_purpose_schema?useSSL=false
+		</property>
+		<property name="hibernate.connection.username">bnenavat</property>
+		<property name="hibernate.connection.password">teksystems</property>
+		<property name="hibernate.dialet">org.hibernate.dialect.MySQL8Dialect</property>
+	</session-factory>
+</hibernate-configuration>
