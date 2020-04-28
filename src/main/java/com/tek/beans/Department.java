@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.envers.AuditJoinTable;
 import org.hibernate.envers.Audited;
 
 @Audited

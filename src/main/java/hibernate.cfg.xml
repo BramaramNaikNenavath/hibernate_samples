@@ -11,7 +11,11 @@
 		<property name="hibernate.dialet">org.hibernate.dialect.MySQL8Dialect</property>
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
-		<property name="hibernate.current_session_context_class">thread</property>
+		<!-- <property name="hibernate.current_session_context_class">thread</property> -->
+
+		<!-- <property name="org.hibernate.envers.audit_strategy">org.hibernate.envers.strategy.ValidityAuditStrategy</property> -->
+		<!-- <property name="hibernate.envers.autoRegisterListeners">false</property> -->
+
 		<mapping class="com.tek.hibernate.firstcachemethods.Dept" />
 		<mapping class="com.tek.beans.Employee" />
 		<mapping class="com.tek.beans.Address" />
