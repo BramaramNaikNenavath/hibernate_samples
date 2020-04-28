@@ -2,6 +2,7 @@ package com.tek.hibernate.firstcachemethods;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class LOADFirstlevelCache {
@@ -10,6 +11,9 @@ public class LOADFirstlevelCache {
 		configuration.configure();
 		SessionFactory factory = configuration.buildSessionFactory();
 		Session session = factory.openSession();
+
+		Transaction transaction = session.beginTransaction();
+
 		Dept d = session.load(Dept.class, 20);
 		System.out.println("=== " + d.getDeptno() + " ===");
 		System.out.println(d);
@@ -22,6 +26,7 @@ public class LOADFirstlevelCache {
 		// System.out.println("=== " + d1.getDname() + " ==="); // cached from
 		// FIRST_LEVEL_CACHE
 
+		transaction.commit();
 		session.disconnect();
 		factory.close();
 	}

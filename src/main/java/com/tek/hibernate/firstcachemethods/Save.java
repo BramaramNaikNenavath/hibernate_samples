@@ -18,8 +18,8 @@ public class Save {
 
 		Dept d = new Dept();
 		// d.setDeptno(19);
-		d.setDname("MATERIALS");
-		d.setLoc("CHINA");
+		d.setDname("Dummy_D");
+		d.setLoc("Dummy_L");
 
 		System.out.println("-----------");
 		Serializable generatedId = session.save(d);

@@ -14,7 +14,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
+import org.hibernate.envers.Audited;
 
+@Audited
 @Entity
 @Table(name = "EMPLOYEE")
 @Access(value = AccessType.FIELD)

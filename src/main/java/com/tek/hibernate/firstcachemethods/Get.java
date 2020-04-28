@@ -9,6 +9,7 @@ public class Get {
 		Configuration configuration = new Configuration();
 		configuration.configure();
 		SessionFactory factory = configuration.buildSessionFactory();
+		System.out.println(" ==== " + factory.getCurrentSession());
 		Session session = factory.openSession();
 
 		Dept d = session.get(Dept.class, 20);

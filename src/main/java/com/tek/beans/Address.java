@@ -12,7 +12,9 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
+import org.hibernate.envers.Audited;
 
+@Audited
 @Entity
 @Table(name = "ADDRESS")
 @Access(value = AccessType.FIELD)
